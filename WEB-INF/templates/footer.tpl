@@ -30,12 +30,12 @@
  {if !empty($user->name)} 
  { 
 <div style="position: fixed;left: 1200px; top:500px">
-<div id="timer" style="position: fixed;left: 1220px;top: 450px;color: darkblue" ></div>
+<div id="timer" style="position: fixed;left: 1100px;top: 450px;color: darkblue;"></div>
 
 <div id="additionalTime" style="display:none">0</div>
-<span id="startButton"  role="button">Start</span>
-<a id="pauseButton" role="button" >Pause</a>
-<span id="clearButton" role="button">Clear</span>
+<button id="startButton" tabindex="-1" style="position: fixed; left: 1100px">Start</button>
+<button id="pauseButton" tabindex="-1" style="position: fixed; left: 1148px" >Pause</button>
+<button id="clearButton" tabindex="-1" style="position: fixed; left: 1200px">Clear</button>
 <div class="modal fade bs-example-modal-lg"  data-backdrop="static" data-keyboard="false" id="add-edit-modal" style="background-color: initial; left: 50%; top: 15%;  display: none" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 <div class="modal-dialog modal-lg" >
             <div class="modal-content">
@@ -60,16 +60,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
-<script src="js/index.js"></script>
 <script src="js/bootstrap-modalmanager.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery-ui-1.10.3.custom.js"></script>
-<script src="js/migration.js"></script>
+<!--<script src="js/jquery-ui.min.js"></script>-->
+<!--<script src="js/jquery-ui-1.10.3.custom.js"></script>-->
+<!--<script src="js/migration.js"></script>-->
 
 <script src="js/jsCookie.js"></script>
 <script src="js/moment.js"></script>
+<script src="js/index.js"></script>
+
 <script type="text/javascript">
 /*$('input:text').keydown(function(e) {
     if (e.keyCode == 0 || e.keyCode == 32)
@@ -78,9 +79,7 @@ event.stopImmediatePropagation();
 console.log('space pressed');
 });*/
 
- $(document).bind('keydown', 'space', function () {
-  event.stopImmediatePropagation();
-}) ; 
+ 
 $('#startButton').mousedown(function(event) {
     $("#clearButton").trigger('click');
       $("#startButton").trigger('click');

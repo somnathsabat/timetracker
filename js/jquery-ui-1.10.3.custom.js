@@ -4807,10 +4807,10 @@ $.widget( "ui.accordion", {
 			case keyCode.UP:
 				toFocus = this.headers[ ( currentIndex - 1 + length ) % length ];
 				break;
-			case keyCode.SPACE:
-			case keyCode.ENTER:
-				this._eventHandler( event );
-				break;
+			//case keyCode.SPACE:
+			//case keyCode.ENTER:
+				//this._eventHandler( event );
+				//break;
 			case keyCode.HOME:
 				toFocus = this.headers[ 0 ];
 				break;
@@ -5960,9 +5960,9 @@ $.widget( "ui.button", {
 					if ( options.disabled ) {
 						return false;
 					}
-					if ( event.keyCode === $.ui.keyCode.SPACE || event.keyCode === $.ui.keyCode.ENTER ) {
-						$( this ).addClass( "ui-state-active" );
-					}
+					//if ( event.keyCode === $.ui.keyCode.SPACE || event.keyCode === $.ui.keyCode.ENTER ) {
+						//$( this ).addClass( "ui-state-active" );
+					//}
 				})
 				// see #8559, we bind to blur here in case the button element loses
 				// focus between keydown and keyup, it would be left in an "active" state
@@ -9201,7 +9201,7 @@ $.widget( "ui.menu", {
 			}
 			break;
 		case $.ui.keyCode.ENTER:
-		case $.ui.keyCode.SPACE:
+		//case $.ui.keyCode.SPACE:
 			this._activate( event );
 			break;
 		case $.ui.keyCode.ESCAPE:

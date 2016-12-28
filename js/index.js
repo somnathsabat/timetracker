@@ -173,7 +173,11 @@ function startTimer() {
 
 	function handleSpaceKeyPress() {
 		$(document).keyup(function(keyPressed) {
-	    if (keyPressed.keyCode == 32) { // If the space bar has been pressed.
+
+
+	    if (keyPressed.keyCode == 32) {
+         
+	     // If the space bar has been pressed.
 	      if ($('#startButton').css('display') == 'inline-block') { // If the start button is visible.
 	      	$('#startButton').click();
 	      }
@@ -190,13 +194,17 @@ function startTimer() {
 	-------------------------------*/
 
 	function startTimerOnClick() {
+					/* Act on the event */
+		
 		$('#startButton').click(function () {
+			
 			$(this).css('display', 'none'); // Hide the 'Start' button.
 			$('#clearButton').css('display', 'none'); // Hide the 'Clear' button in the case it was shown.
 			$('#pauseButton').css('display', 'inline-block'); // Show 'Pause' button.
 
 			startTimer();
 		});
+		
 	}
 
 	/*-------------------------
